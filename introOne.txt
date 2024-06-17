@@ -1,0 +1,109 @@
+React is library.
+
+without jsx also, we can create react elements.
+
+
+-------------------------------------
+html markups
+
+<body>
+    <!-- <h1>Namasthey React from html</h1> -->
+    <div id="root">
+        <h1>hello world</h1>
+    </div>
+</body>
+
+
+------------------------------------
+
+
+// we can create an html element with javascript also.
+    
+        <script>
+              const h1  = document.createElement("h1")
+              h1.innerHTML = "Heading 1";
+              const root = document.getElementById("root")
+              root.appendChild(h1);
+        </script>
+
+        with the above code, we created an h1 element in the page.
+        but we can simply create that using direct html h1 tag also.
+
+//
+   using react library also , we create the above result,
+   without jsx.
+
+    first, we need to install/inject react code in to our project.
+      <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+      <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    the first link is for  installing latest version of react @18 version.
+    the second link is for installing browser version of react since react has mobile,engine versions also.
+    to intimate the browser, we need to specify it.
+
+    //simply those two links provide some javascript code to provide some functionalities in the react
+      so we can minimize the code by simply using those methods.
+    
+    // before creating any react element, we should inject these files otherwise browser throws
+       react is not defined error in the console.
+
+    
+   --> creating react element 
+
+        //after importing the react files,
+
+        const h1  = React.createElement("h1",{},"heading 1");
+        const root = React.createRoot(document.getElementById("root"))
+        root.render(h1);
+
+        with the above code , we create a react element which achieves the above result.
+
+        
+        ----const h1  = React.createElement("h1",{},"heading 1");
+                        
+                        1. createElement() takes three agruments,
+                             1. Name of the element    
+                                    eg. h1
+                             2. props object.    
+                                    it can be null or empty object, basically we can pass attriburtes we pass to the elements of html
+                                    eg .   {class :"background",key:"key1",style: { color: "red", fontSize: "20px" }}.
+                             3. children 
+                                    we can pass string,numeric values also array of react elements also .   
+
+
+        ----const root = React.createRoot(document.getElementById("root"))
+
+                        this will tell the browser where to render the react element
+                        usually there will only one root element
+                        on top of this file we have html markups, we have root div
+                        by specifying that element we can override that root div element 
+                        by rendering the react element.
+
+
+    
+        -----root.render(h1);
+
+                        this will render the h1 reat element into the root div element.
+                        it will override the root div.
+                        root div element can contain other tags, but this render elements overrides those tags.
+                        
+                    
+    
+  NOTE :    if the index.html file contains all the css code and javascript code 
+             it may looks ambigious and clutter
+             so we can create seperate files and import them 
+                 we can import javascript file.js  using script tag
+                     <script src="path of the file"> </script>
+                 we can import css file into link tag
+                     <link rel="stylesheet" href="/index.css">
+
+
+
+
+
+we can create react elements without jsx but without jsx we have to go through all the process to create element
+using createElement() and appendChild() method.
+using jsx we can simple write our html code and css code.
+
+ 
+
