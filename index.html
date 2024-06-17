@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namasthey React</title>
+    <link rel="stylesheet" href="/index.css">
+
+</head>
+<body>
+    <!-- <h1>Namasthey React from html</h1> -->
+    <div id="root">
+        <h1>hello world</h1>
+    </div>
+</body>
+
+
+    <!-- we can create an html element using javascript also like below. -->
+  
+    <!-- <script>
+           const h1 = document.createElement("h1")
+           h1.innerHTML = "Namasthey from javasript";
+           const root = document.getElementById("root");
+           root.appendChild(h1);
+    </script> -->
+
+
+  <!-- by including the following first CDN link of the below two links
+       we injected REACT into our project
+       with the help of these,
+       we get some helper methods from the react library
+       note :  simple, these two cdn links contains pure javascript code 
+               that helps us create react application by minimizing the 
+               javascript code
+
+      as we know, js engine provides us one global object i.e, window object.
+       like that only we get a global react object by injecting react into our code.
+  -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <!-- from the above link, we are injecting 18th version of react (react@18) -->
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- from the above link, we are injecting the web browser version of react (react-dom@18)
+       because, react has mobile versions(react native) and etc also -->
+
+    <!-- first we need to inject these  react and react-dom   then only the react can render otherwise it can't render
+         the browser throws   react is not defined error.
+    -->
+   
+
+
+         <script src="/App.js"></script>
+</html>
